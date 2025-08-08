@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Ilafar/my-app/static/css/main.75873939.css",
+    "main.js": "/Ilafar/my-app/static/js/main.c605d633.js",
+    "static/js/453.96453769.chunk.js": "/Ilafar/my-app/static/js/453.96453769.chunk.js",
+    "index.html": "/Ilafar/my-app/index.html",
+    "main.75873939.css.map": "/Ilafar/my-app/static/css/main.75873939.css.map",
+    "main.c605d633.js.map": "/Ilafar/my-app/static/js/main.c605d633.js.map",
+    "453.96453769.chunk.js.map": "/Ilafar/my-app/static/js/453.96453769.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75873939.css",
+    "static/js/main.c605d633.js"
+  ]
+}
