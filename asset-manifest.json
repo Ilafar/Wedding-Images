@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.48e8afa3.css",
-    "main.js": "/my-app/static/js/main.317db157.js",
-    "static/js/453.96453769.chunk.js": "/my-app/static/js/453.96453769.chunk.js",
-    "index.html": "/my-app/index.html",
-    "main.48e8afa3.css.map": "/my-app/static/css/main.48e8afa3.css.map",
-    "main.317db157.js.map": "/my-app/static/js/main.317db157.js.map",
-    "453.96453769.chunk.js.map": "/my-app/static/js/453.96453769.chunk.js.map"
+    "main.css": "/Wedding-Images/static/css/main.48e8afa3.css",
+    "main.js": "/Wedding-Images/static/js/main.03e08449.js",
+    "static/js/453.76060069.chunk.js": "/Wedding-Images/static/js/453.76060069.chunk.js",
+    "index.html": "/Wedding-Images/index.html",
+    "main.48e8afa3.css.map": "/Wedding-Images/static/css/main.48e8afa3.css.map",
+    "main.03e08449.js.map": "/Wedding-Images/static/js/main.03e08449.js.map",
+    "453.76060069.chunk.js.map": "/Wedding-Images/static/js/453.76060069.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.48e8afa3.css",
-    "static/js/main.317db157.js"
+    "static/js/main.03e08449.js"
   ]
 }
