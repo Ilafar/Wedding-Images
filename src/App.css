@@ -1,21 +1,31 @@
 .App {
   text-align: center;
   padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .upload-btn {
   display: inline-block;
-  padding: 12px 48px;
+  margin: 30px auto; 
+  padding: 20px 65px;
   background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 30px;
   font-size: 16px;
   transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif; 
 }
+
 
 .upload-btn:hover {
   background: linear-gradient(to right, #2575fc, #6a11cb);
@@ -59,7 +69,344 @@
   animation: spin 1s linear infinite;
 }
 
+.password-input {
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 250px;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 15px;
+  text-align: center;
+}
+
+
+.upload-btn:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4e54c8;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.alert-box {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 90%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.alert-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cancel-btn {
+  padding: 10px 30px;
+  border: none;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cancel-btn:hover {
+  background-color: #e60000;
+}
+
+.labelGallery {
+  color:#11cb11;
+  margin-bottom: 50px
+}
+
+/* Modal background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+/* Modal content box */
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: default;
+}
+
+/* Large image inside modal */
+.modal-content img {
+  max-width: 100%;
+  max-height: 90vh; /* limit height to 90% of viewport */
+  height: auto;     /* keep aspect ratio */
+  border-radius: 12px;
+  display: block;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255,255,255,1);
+}
+
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  10% { opacity: 1; transform: translate(-50%, -50%); }
+  90% { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -40%); }
+}
+
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.download-btn {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  user-select: none;
+}
+
+.download-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Wrapper around image + checkbox */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Checkbox at top-left corner */
+.image-checkbox {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Existing modal & image styles should stay the same */
+
+/* For example: */
+.image-fixed {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:20px;
+  margin-bottom: 20px;
+}
+
+.top-controls .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left:  40px;
+}
+
+.top-controls .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right:  40px;
+}
+
+.gallery{
+  text-align: center;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.select-all {
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.action-button {
+  background: #4CAF50;
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.action-button:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+.delete-btn {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  user-select: none;
+  background: #e53935;
+}
+
+.delete-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-checkbox {
+  position: absolute;
+  top: 0.4em;
+  left: 0.4em;
+  z-index: 1;
+}
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
