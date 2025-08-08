@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Ilafar/my-app/static/css/main.75873939.css",
-    "main.js": "/Ilafar/my-app/static/js/main.c605d633.js",
-    "static/js/453.96453769.chunk.js": "/Ilafar/my-app/static/js/453.96453769.chunk.js",
-    "index.html": "/Ilafar/my-app/index.html",
-    "main.75873939.css.map": "/Ilafar/my-app/static/css/main.75873939.css.map",
-    "main.c605d633.js.map": "/Ilafar/my-app/static/js/main.c605d633.js.map",
-    "453.96453769.chunk.js.map": "/Ilafar/my-app/static/js/453.96453769.chunk.js.map"
+    "main.css": "/my-app/static/css/main.75873939.css",
+    "main.js": "/my-app/static/js/main.aad60991.js",
+    "static/js/453.96453769.chunk.js": "/my-app/static/js/453.96453769.chunk.js",
+    "index.html": "/my-app/index.html",
+    "main.75873939.css.map": "/my-app/static/css/main.75873939.css.map",
+    "main.aad60991.js.map": "/my-app/static/js/main.aad60991.js.map",
+    "453.96453769.chunk.js.map": "/my-app/static/js/453.96453769.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.75873939.css",
-    "static/js/main.c605d633.js"
+    "static/js/main.aad60991.js"
   ]
 }
