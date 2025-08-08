@@ -12,6 +12,8 @@ function GalleryPage() {
   const [selectedImages, setSelectedImages] = useState(new Set());
   const [selectAll, setSelectAll] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
+  const [loadingImages, setLoadingImages] = useState(new Set());
+
   const navigate = useNavigate();
   const imagesListRef = ref(storage);
 
@@ -26,6 +28,8 @@ function GalleryPage() {
         getDownloadURL(item).then((url) => {
           setImageUrls((prev) => {
             if (!prev.includes(url)) {
+              // Mark image as loading initially
+              setLoadingImages((prevLoading) => new Set(prevLoading).add(url));
               return [...prev, url];
             }
             return prev;
@@ -155,11 +159,30 @@ function GalleryPage() {
               onChange={() => toggleSelect(url)}
               title="Seç"
             />
+            {loadingImages.has(url) && (
+              <div className="image-spinner-overlay">
+                <div className="spinner"></div>
+              </div>
+            )}
             <img
               src={url}
               alt={`uploaded ${index}`}
               className="image-fixed"
               onClick={() => setModalImage(url)}
+              onLoad={() => {
+                setLoadingImages((prev) => {
+                  const newSet = new Set(prev);
+                  newSet.delete(url);
+                  return newSet;
+                });
+              }}
+              onError={() => {
+                setLoadingImages((prev) => {
+                  const newSet = new Set(prev);
+                  newSet.delete(url);
+                  return newSet;
+                });
+              }}
               style={{ cursor: "pointer" }}
             />
           </div>
